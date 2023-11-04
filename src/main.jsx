@@ -13,11 +13,14 @@ import ManageMyFood from './Pages/ManageMyFood';
 import MyFoodReq from './Pages/MyFoodReq';
 import Login from './Pages/Login';
 import Register from './Pages/Register';
+import { Footer } from 'flowbite-react';
+import Errorpage from './Pages/Errorpage';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <Errorpage></Errorpage>,
     children: [
       {
         path: '/',
@@ -46,6 +49,10 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register></Register>
+      },
+      {
+        path:'/footer',
+        element: <Footer></Footer>
       }
     ]
   },

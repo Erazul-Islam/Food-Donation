@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [require("daisyui"),require('flowbite/plugin')],
+  plugins: [require("daisyui")],
   daisyui: {
     themes: ["valentine"], // true: all themes | false: only light + dark | array: specific themes like this ["light", "dark", "cupcake"]
   },
