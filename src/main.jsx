@@ -15,6 +15,7 @@ import Login from './Pages/Login';
 import Register from './Pages/Register';
 import { Footer } from 'flowbite-react';
 import Errorpage from './Pages/Errorpage';
+import FeaturedDetail from './Components/Featured/FeaturedDetail';
 
 const router = createBrowserRouter([
   {
@@ -53,6 +54,11 @@ const router = createBrowserRouter([
       {
         path:'/footer',
         element: <Footer></Footer>
+      },
+      {
+        path: '/detail/:_id',
+        element: <FeaturedDetail></FeaturedDetail>,
+        loader: () => fetch('http://localhost:5000/add')
       }
     ]
   },

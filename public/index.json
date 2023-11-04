@@ -1,0 +1,62 @@
+[
+    {
+        "food_id": 1,
+        "image": "https://i.ibb.co/D1gzVPb/khalid-boutchich-pu-F0p1t-AYW8-unsplash.jpg",
+        "food_name": "Homemade Lasagna",
+        "donator_name": "John Doe",
+        "donator_img": "https://example.com/john-doe.jpg",
+        "food_quantity": "2 servings",
+        "expired_date": "2023-12-01",
+        "additional_note": "Contains beef and pasta."
+    },
+    {
+        "food_id": 2,
+        "image": "https://i.ibb.co/xjFpFNv/ivan-torres-MQUqbmsz-GGM-unsplash.jpg",
+        "food_name": "Vegetable Stir-Fry",
+        "donator_name": "Jane Smith",
+        "donator_img": "https://example.com/jane-smith.jpg",
+        "food_quantity": "3 portions",
+        "expired_date": "2023-11-30",
+        "additional_note": "Vegan-friendly, no nuts."
+    },
+    {
+        "food_id": 3,
+        "image": "https://i.ibb.co/6DDpRS2/andy-wang-Pf-b-ZQp-Ca-MI-unsplash.jpg",
+        "food_name": "Cheeseburger and Fries",
+        "donator_name": "Robert Johnson",
+        "donator_img": "https://example.com/robert-johnson.jpg",
+        "food_quantity": "1 meal",
+        "expired_date": "2023-11-29",
+        "additional_note": "Served with ketchup and mayo."
+    },
+    {
+        "food_id": 4,
+        "image": "https://i.ibb.co/d4HknB7/pille-r-priske-xmu-Igju-QG0-M-unsplash.jpg",
+        "food_name": "Fruit Salad",
+        "donator_name": "Emily Wilson",
+        "donator_img": "https://example.com/emily-wilson.jpg",
+        "food_quantity": "1 bowl",
+        "expired_date": "2023-12-03",
+        "additional_note": "Fresh mix of seasonal fruits."
+    },
+    {
+        "food_id": 5,
+        "image": "https://i.ibb.co/JRKFXJT/eyasu-etsub-WMFs-Aygl3-CQ-unsplash.jpg",
+        "food_name": "Chicken and Rice",
+        "donator_name": "Michael Brown",
+        "donator_img": "https://example.com/michael-brown.jpg",
+        "food_quantity": "2 servings",
+        "expired_date": "2023-11-28",
+        "additional_note": "Spicy, with a side of veggies."
+    },
+    {
+        "food_id": 6,
+        "image": "https://i.ibb.co/yqRNhJR/mk-s-Ft-Q9v-vfkl-Q-unsplash.jpg",
+        "food_name": "Pasta Primavera",
+        "donator_name": "Sarah Adams",
+        "donator_img": "https://example.com/sarah-adams.jpg",
+        "food_quantity": "2 portions",
+        "expired_date": "2023-12-02",
+        "additional_note": "Vegetarian, creamy sauce."
+    }
+]
