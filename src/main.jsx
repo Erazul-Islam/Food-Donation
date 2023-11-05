@@ -11,11 +11,12 @@ import AddFood from './Pages/AddFood';
 import AvailableFood from './Pages/AvailableFood';
 import ManageMyFood from './Pages/ManageMyFood';
 import MyFoodReq from './Pages/MyFoodReq';
-import Login from './Pages/Login';
-import Register from './Pages/Register';
 import { Footer } from 'flowbite-react';
 import Errorpage from './Pages/Errorpage';
 import FeaturedDetail from './Components/Featured/FeaturedDetail';
+import Login from './Components/Authentication/Login';
+import Register from './Components/Authentication/Register';
+import AuthProvider from './Components/Providers/AuthProvider';
 
 const router = createBrowserRouter([
   {
@@ -52,20 +53,22 @@ const router = createBrowserRouter([
         element: <Register></Register>
       },
       {
-        path:'/footer',
+        path: '/footer',
         element: <Footer></Footer>
       },
       {
         path: '/detail/:_id',
         element: <FeaturedDetail></FeaturedDetail>,
         loader: () => fetch('http://localhost:5000/add')
-      }
+      },
     ]
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )

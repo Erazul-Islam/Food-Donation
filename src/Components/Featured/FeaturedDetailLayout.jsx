@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 const FeaturedDetailLayout = ({ food }) => {
     console.log(food)
 
@@ -30,6 +31,7 @@ const FeaturedDetailLayout = ({ food }) => {
                                 <img src={image} alt="" />
                                 <p>{donator_name}</p>
                                 <p>{expired_date}</p>
+                                <p>{additional_note}</p>
                                 <p className="py-4">{dateTimeString}</p>
                                 <p>{_id}</p>
                             </div>
