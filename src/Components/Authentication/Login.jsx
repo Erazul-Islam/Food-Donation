@@ -8,22 +8,48 @@ import { useState } from "react";
 
 const Login = () => {
 
-    const {googleSignIn,signInUser} = useContext(AuthContext)
+    const { googleSignIn, signInUser } = useContext(AuthContext)
     console.log(googleSignIn)
     const navigate = useNavigate();
 
-    const [loginError,setLoginError] = useState('')
+    const [loginError, setLoginError] = useState('')
 
     const handleGoogleLogin = () => {
         console.log('done')
         googleSignIn()
-        .then(res => {
-            console.log(res)
-            navigate('/')
-        })
-        .catch(error => {
-            console.log(error)
-        })
+            .then(res => {
+                console.log(res)
+                navigate('/')
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    }
+
+    const handleLogin = e => {
+        e.preventDefault();
+        const email = e.target.email.value;
+        const password = e.target.password.value
+        console.log(email, password)
+        setLoginError('')
+
+        if (!email) {
+            setLoginError('Enter valid Emai')
+            return
+        }
+        else if (password !== password) {
+            setLoginError('Enter a valid Password')
+        }
+
+        signInUser(email, password)
+            .then(res => {
+                console.log(res.user)
+                e.target.reset()
+                navigate('/')
+            })
+            .catch(error => {
+                console.log(error)
+            })
     }
 
     return (
@@ -34,7 +60,7 @@ const Login = () => {
                         <h1 className="text-5xl text-purple-700 font-bold">Login now!</h1>
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                        <form  className="card-body">
+                        <form onSubmit={handleLogin} className="card-body">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
@@ -56,9 +82,9 @@ const Login = () => {
                             <p className="pb-4">OR Login With</p>
                             <button onClick={handleGoogleLogin} className=" btn btn-secondary">Google</button>
                         </div>
-                        {/* {
+                        {
                             loginError && <p className="pl-6 pb-3 text-red-500">{loginError}</p>
-                        } */}
+                        }
                     </div>
                 </div>
             </div>
