@@ -1,7 +1,9 @@
-/* eslint-disable react/prop-types */
-const FoodLayout = ({food}) => {
+import { Link } from "react-router-dom";
 
-    const { _id,image, food_name, donator_name, donator_img, food_quantity, expired_date, additional_note,picup_Location } = food || {}
+/* eslint-disable react/prop-types */
+const FoodLayout = ({ food }) => {
+
+    const { _id, image, food_name, donator_name, donator_img, food_quantity, expired_date, additional_note, picup_Location } = food || {}
 
     return (
         <div>
@@ -19,10 +21,13 @@ const FoodLayout = ({food}) => {
                     <p>{donator_name}</p>
                     <p>{picup_Location}</p>
                     <div className="card-actions">
-                        <button className="btn btn-primary">Buy Now</button>
+                        <Link to={`/avail/${_id}`}>
+                            <button className="btn btn-primary"> View Details</button>
+                        </Link>
                     </div>
                 </div>
             </div>
+            
         </div>
     );
 };

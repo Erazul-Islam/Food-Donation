@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 import { useState } from "react";
+import Footer from "../../Pages/Footer";
 
 
 
@@ -88,6 +89,7 @@ const Login = () => {
                     </div>
                 </div>
             </div>
+            <Footer></Footer>
         </div>
     );
 };

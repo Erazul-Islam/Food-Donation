@@ -3,6 +3,7 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
+import Footer from "../../Pages/Footer";
 
 const Register = () => {
 
@@ -95,6 +96,7 @@ const Register = () => {
                     </div>
                 </div>
             </div>
+            <Footer></Footer>
         </div>
     );
 };

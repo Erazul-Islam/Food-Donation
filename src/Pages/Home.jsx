@@ -3,6 +3,7 @@ import Slider from "../Components/Slider";
 import FoodCard from "../Components/Featured/FoodCard";
 import Footer from "./Footer";
 import PopularDonator from "../Components/ExtraHomePageSection/PopularDonator";
+import { Link } from "react-router-dom";
 
 const Home = () => {
 
@@ -25,7 +26,11 @@ const Home = () => {
                     }
                 </div>
             </div>
-
+            <div>
+                <Link to='/available'>
+                    <button className="btn btn-error lg:ml-[1000px]">See All</button>
+                </Link>
+            </div>
             <div>
                 <PopularDonator></PopularDonator>
             </div>

@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import FoodLayout from "./FoodLayout";
+import Footer from "../../Pages/Footer";
 
 const AvailableFood = () => {
 
@@ -13,6 +14,7 @@ const AvailableFood = () => {
                     data.map(food => <FoodLayout food={food} key={food._id}></FoodLayout>)
                 }
             </div>
+            <Footer></Footer>
         </div>
     );
 };
