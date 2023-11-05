@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Slider from "../Components/Slider";
 import FoodCard from "../Components/Featured/FoodCard";
 import Footer from "./Footer";
+import PopularDonator from "../Components/ExtraHomePageSection/PopularDonator";
 
 const Home = () => {
 
@@ -24,6 +25,11 @@ const Home = () => {
                     }
                 </div>
             </div>
+
+            <div>
+                <PopularDonator></PopularDonator>
+            </div>
+
             <Footer></Footer>
         </div>
     );

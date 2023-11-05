@@ -1,0 +1,134 @@
+[
+    {
+        "food_id": 1,
+        "image": "https://i.ibb.co/D1gzVPb/khalid-boutchich-pu-F0p1t-AYW8-unsplash.jpg",
+        "food_name": "Homemade Lasagna",
+        "donator_name": "John Doe",
+        "donator_img": "https://i.ibb.co/t2z4gVk/download-2.jpg",
+        "food_quantity": "2 servings",
+        "expired_date": "2023-12-01",
+        "picup_Location": "Savar",
+        "additional_note": "Contains beef and pasta."
+    },
+    {
+        "food_id": 2,
+        "image": "https://i.ibb.co/xjFpFNv/ivan-torres-MQUqbmsz-GGM-unsplash.jpg",
+        "food_name": "Vegetable Stir-Fry",
+        "donator_name": "Jane Smith",
+        "donator_img": "https://i.ibb.co/LrNjjD5/download-1.jpg",
+        "food_quantity": "3 portions",
+        "expired_date": "2023-11-30",
+        "picup_Location": "Nabinagar",
+        "additional_note": "Vegan-friendly, no nuts."
+    },
+    {
+        "food_id": 3,
+        "image": "https://i.ibb.co/6DDpRS2/andy-wang-Pf-b-ZQp-Ca-MI-unsplash.jpg",
+        "food_name": "Cheeseburger and Fries",
+        "donator_name": "Robert Johnson",
+        "donator_img": "https://i.ibb.co/D5XrbTP/download-3.jpg",
+        "food_quantity": "1 meal",
+        "expired_date": "2023-11-29",
+        "picup_Location": "Savar",
+        "additional_note": "Served with ketchup and mayo."
+    },
+    {
+        "food_id": 4,
+        "image": "https://i.ibb.co/d4HknB7/pille-r-priske-xmu-Igju-QG0-M-unsplash.jpg",
+        "food_name": "Fruit Salad",
+        "donator_name": "Emily Wilson",
+        "donator_img": "https://i.ibb.co/LrNjjD5/download-1.jpg",
+        "food_quantity": "1 bowl",
+        "expired_date": "2023-12-03",
+        "picup_Location": "DOHS",
+        "additional_note": "Fresh mix of seasonal fruits."
+    },
+    {
+        "food_id": 5,
+        "image": "https://i.ibb.co/JRKFXJT/eyasu-etsub-WMFs-Aygl3-CQ-unsplash.jpg",
+        "food_name": "Chicken and Rice",
+        "donator_name": "Michael Brown",
+        "donator_img": "https://i.ibb.co/D5XrbTP/download-3.jpg",
+        "food_quantity": "2 servings",
+        "expired_date": "2023-11-28",
+        "picup_Location": "Mirpur",
+        "additional_note": "Spicy, with a side of veggies."
+    },
+    {
+        "food_id": 6,
+        "image": "https://i.ibb.co/yqRNhJR/mk-s-Ft-Q9v-vfkl-Q-unsplash.jpg",
+        "food_name": "Pasta Primavera",
+        "donator_name": "Sarah Adams",
+        "donator_img": "https://example.com/sarah-adams.jpg",
+        "food_quantity": "2 portions",
+        "expired_date": "2023-12-02",
+        "picup_Location": "Banani",
+        "additional_note": "Vegetarian, creamy sauce."
+    },
+    {
+        "food_id": 7,
+        "image": "https://i.ibb.co/ZWmwpPL/louis-hansel-w-Xk-Gv-QJWI-Y-unsplash.jpg",
+        "food_name": "Sushi",
+        "donator_name": "Vladimir Putin",
+        "donator_img": "https://i.ibb.co/t2z4gVk/download-2.jpg",
+        "food_quantity": "2 portions",
+        "expired_date": "2023-12-02",
+        "picup_Location": "Banani",
+        "additional_note": "Sushi is a famous Japanese dish consisting of vinegared rice combined with various ingredients "
+    },
+    {
+        "food_id": 8,
+        "image": "https://i.ibb.co/CMpQKfN/ruth-georgiev-IGk3j32-Sr-KU-unsplash.jpg",
+        "food_name": "Pad Thai",
+        "donator_name": "ABD Villiars",
+        "donator_img": "https://i.ibb.co/LrNjjD5/download-1.jpg",
+        "food_quantity": "4 portions",
+        "expired_date": "2023-12-03",
+        "picup_Location": "Banani",
+        "additional_note": "Pad Thai is a stir-fried noodle dish made with rice noodles, eggs, tofu or shrimp"
+    },
+    {
+        "food_id": 9,
+        "image": "https://i.ibb.co/CMpQKfN/ruth-georgiev-IGk3j32-Sr-KU-unsplash.jpg",
+        "food_name": "Dim Sum",
+        "donator_name": "Quenton De Kok",
+        "donator_img": "https://i.ibb.co/D5XrbTP/download-3.jpg",
+        "food_quantity": "5 portions",
+        "expired_date": "2023-12-05",
+        "picup_Location": "Banani",
+        "additional_note": " Dim Sum refers to a variety of small, bite-sized dishes traditionally served in bamboo steamer baskets."
+    },
+    {
+        "food_id": 10,
+        "image": "https://i.ibb.co/ws7jxNW/nikolay-smeh-g-Ppb-Fa-Ekl00-unsplash.jpg",
+        "food_name": "Bibimbap",
+        "donator_name": "Sarah Ali Khan",
+        "donator_img": "https://i.ibb.co/sb5R5Mz/download.jpg",
+        "food_quantity": "2 portions",
+        "expired_date": "2023-12-10",
+        "picup_Location": "Banani",
+        "additional_note": "Bibimbap is a Korean dish consisting of rice topped with a variety of seasoned vegetables."
+    },
+    {
+        "food_id": 11,
+        "image": "https://i.ibb.co/NxWbWhf/alexandra-tran-VW0bzb90o-MA-unsplash.jpg",
+        "food_name": "Tom Yum Soup",
+        "donator_name": "Issac",
+        "donator_img": "https://i.ibb.co/D5XrbTP/download-3.jpg",
+        "food_quantity": "2 portions",
+        "expired_date": "2023-12-12",
+        "picup_Location": "Banani",
+        "additional_note": "om Yum is a hot and sour Thai soup typically made with shrimp, mushrooms, lemongrass."
+    },
+    {
+        "food_id": 12,
+        "image": "https://i.ibb.co/34Y3tq4/dan-dealmeida-Qhqj0tc-Xkbg-unsplash.jpg",
+        "food_name": "Miso Soup ",
+        "donator_name": "Tahmid Khan",
+        "donator_img": "https://i.ibb.co/t2z4gVk/download-2.jpg",
+        "food_quantity": "2 portions",
+        "expired_date": "2023-12-11",
+        "picup_Location": "Banani",
+        "additional_note": "Miso soup is a traditional Japanese soup made with a base of miso paste and dashi (stock)."
+    }
+]

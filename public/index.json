@@ -7,6 +7,7 @@
         "donator_img": "https://example.com/john-doe.jpg",
         "food_quantity": "2 servings",
         "expired_date": "2023-12-01",
+        "picup_Location": "Savar",
         "additional_note": "Contains beef and pasta."
     },
     {
@@ -17,6 +18,7 @@
         "donator_img": "https://example.com/jane-smith.jpg",
         "food_quantity": "3 portions",
         "expired_date": "2023-11-30",
+        "picup_Location": "Nabinagar",
         "additional_note": "Vegan-friendly, no nuts."
     },
     {
@@ -27,6 +29,7 @@
         "donator_img": "https://example.com/robert-johnson.jpg",
         "food_quantity": "1 meal",
         "expired_date": "2023-11-29",
+        "picup_Location": "Savar",
         "additional_note": "Served with ketchup and mayo."
     },
     {
@@ -37,6 +40,7 @@
         "donator_img": "https://example.com/emily-wilson.jpg",
         "food_quantity": "1 bowl",
         "expired_date": "2023-12-03",
+        "picup_Location": "DOHS",
         "additional_note": "Fresh mix of seasonal fruits."
     },
     {
@@ -47,6 +51,7 @@
         "donator_img": "https://example.com/michael-brown.jpg",
         "food_quantity": "2 servings",
         "expired_date": "2023-11-28",
+        "picup_Location": "Mirpur",
         "additional_note": "Spicy, with a side of veggies."
     },
     {
@@ -57,6 +62,7 @@
         "donator_img": "https://example.com/sarah-adams.jpg",
         "food_quantity": "2 portions",
         "expired_date": "2023-12-02",
+        "picup_Location": "Banani",
         "additional_note": "Vegetarian, creamy sauce."
     }
 ]

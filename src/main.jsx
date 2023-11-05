@@ -8,7 +8,6 @@ import {
 import Root from './Root';
 import Home from './Pages/Home';
 import AddFood from './Pages/AddFood';
-import AvailableFood from './Pages/AvailableFood';
 import ManageMyFood from './Pages/ManageMyFood';
 import MyFoodReq from './Pages/MyFoodReq';
 import { Footer } from 'flowbite-react';
@@ -17,6 +16,7 @@ import FeaturedDetail from './Components/Featured/FeaturedDetail';
 import Login from './Components/Authentication/Login';
 import Register from './Components/Authentication/Register';
 import AuthProvider from './Components/Providers/AuthProvider';
+import AvailableFood from './Components/AvailableFood/AvailableFood';
 
 const router = createBrowserRouter([
   {
@@ -34,7 +34,8 @@ const router = createBrowserRouter([
       },
       {
         path: '/available',
-        element: <AvailableFood></AvailableFood>
+        element: <AvailableFood></AvailableFood>,
+        loader: () => fetch('http://localhost:5000/avail')
       },
       {
         path: '/manage',
