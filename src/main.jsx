@@ -20,6 +20,7 @@ import AvailableFood from './Components/AvailableFood/AvailableFood';
 import FoodDetail from './Components/AvailableFood/FoodDetail';
 import Edit from './Pages/Edit';
 import PrivateRoute from './Components/Authentication/PrivateRoute';
+import Experiment from './Pages/Experiment';
 
 const router = createBrowserRouter([
   {
@@ -76,6 +77,10 @@ const router = createBrowserRouter([
         path: '/avail/:_id',
         element:<PrivateRoute><FoodDetail></FoodDetail></PrivateRoute>,
         loader: () => fetch('http://localhost:5000/avail')
+      },
+      {
+        path: '/a',
+        element: <Experiment></Experiment>
       }
     ]
   },

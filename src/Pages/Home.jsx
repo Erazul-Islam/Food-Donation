@@ -4,10 +4,16 @@ import FoodCard from "../Components/Featured/FoodCard";
 import Footer from "./Footer";
 import PopularDonator from "../Components/ExtraHomePageSection/PopularDonator";
 import { Link } from "react-router-dom";
+// food_quantity
+
 
 const Home = () => {
 
     const [foods, setFoods] = useState([]);
+    const strAscending = [...foods].sort((a, b) =>
+        a.food_quantity > b.food_quantity ? -1 : 1,
+    );
+    console.log(strAscending)
 
     useEffect(() => {
         fetch('http://localhost:5000/add')
@@ -22,7 +28,7 @@ const Home = () => {
                 <p className="text-center text-5xl mb-12 font-bold animate__animated animate__fadeInTopLeft">Featured Foods</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ml-48">
                     {
-                        foods.map(food => <FoodCard food={food} key={food.food_id}></FoodCard>)
+                        strAscending.map(food => <FoodCard food={food} key={food.food_id}></FoodCard>)
                     }
                 </div>
             </div>
