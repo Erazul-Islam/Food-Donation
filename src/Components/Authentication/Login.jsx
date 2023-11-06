@@ -55,6 +55,7 @@ const Login = () => {
 
     return (
         <div>
+            {/* <img src='https://i.ibb.co/60MDtCL/authentication2-1.jpg' alt="" /> */}
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col">
                     <div className="text-center">
