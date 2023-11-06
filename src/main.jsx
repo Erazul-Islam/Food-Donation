@@ -18,6 +18,7 @@ import Register from './Components/Authentication/Register';
 import AuthProvider from './Components/Providers/AuthProvider';
 import AvailableFood from './Components/AvailableFood/AvailableFood';
 import FoodDetail from './Components/AvailableFood/FoodDetail';
+import Edit from './Pages/Edit';
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,11 @@ const router = createBrowserRouter([
         path: '/manage',
         element: <ManageMyFood></ManageMyFood>,
         loader: () => fetch('http://localhost:5000/avail')
+      },
+      {
+        path: '/edit/:_id',
+        element: <Edit></Edit>,
+        loader: ({params}) => fetch(`http://localhost:5000/avail/${params._id}`)
       },
       {
         path: '/myfood',

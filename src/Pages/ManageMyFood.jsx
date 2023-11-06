@@ -1,10 +1,22 @@
-import { useLoaderData } from "react-router-dom";
+// import { useEffect } from "react";
+// import { useState } from "react";
+import { useState } from "react";
+import { Link, useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const ManageMyFood = () => {
 
+    // const [food,setFoods] = useState([])
+    // const [users,setUsers] = useState(food)
+
+    // useEffect(() => {
+    //     fetch('http://localhost:5000/avail')
+    //     .then(res => res.json())
+    //     .then(data => setFoods(data))
+    // })
+
     const foods = useLoaderData();
-    console.log(foods)
+    const [users, setUsers] = useState(foods)
 
     const handleDelete = _id => {
         console.log(_id)
@@ -16,16 +28,28 @@ const ManageMyFood = () => {
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
             confirmButtonText: "Yes, delete it!"
-          }).then((result) => {
+        }).then((result) => {
             if (result.isConfirmed) {
-            //   Swal.fire({
-            //     title: "Deleted!",
-            //     text: "Your file has been deleted.",
-            //     icon: "success"
-            //   });
-            console.log('delete confirmed')
+
+                fetch(`http://localhost:5000/avail/${_id}`, {
+                    method: "DELETE"
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data)
+                        if (data.deletedCount > 0) {
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Your file has been deleted.",
+                                icon: "success"
+                            });
+                            const remaining = users.filter(user => user._id !== _id)
+                            setUsers(remaining)
+                        }
+                    })
+
             }
-          });
+        });
     }
 
     return (
@@ -72,7 +96,9 @@ const ManageMyFood = () => {
                                     Available
                                 </td>
                                 <th>
-                                    <button className="btn btn-ghost btn-xs">Edit</button>
+                                    <Link to={`/edit/${food._id}`}>
+                                        <button className="btn btn-ghost btn-xs">Edit</button>
+                                    </Link>
                                     <button onClick={() => handleDelete(food._id)} className="btn btn-ghost btn-xs">Delete</button>
                                 </th>
                             </tr>)
