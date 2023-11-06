@@ -19,6 +19,7 @@ import AuthProvider from './Components/Providers/AuthProvider';
 import AvailableFood from './Components/AvailableFood/AvailableFood';
 import FoodDetail from './Components/AvailableFood/FoodDetail';
 import Edit from './Pages/Edit';
+import PrivateRoute from './Components/Authentication/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -32,7 +33,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/addfood',
-        element: <AddFood></AddFood>
+        element: <PrivateRoute><AddFood></AddFood></PrivateRoute>
       },
       {
         path: '/available',
@@ -41,17 +42,17 @@ const router = createBrowserRouter([
       },
       {
         path: '/manage',
-        element: <ManageMyFood></ManageMyFood>,
+        element:<PrivateRoute> <ManageMyFood></ManageMyFood></PrivateRoute>,
         loader: () => fetch('http://localhost:5000/avail')
       },
       {
         path: '/edit/:_id',
-        element: <Edit></Edit>,
+        element: <PrivateRoute><Edit></Edit></PrivateRoute>,
         loader: ({params}) => fetch(`http://localhost:5000/avail/${params._id}`)
       },
       {
         path: '/myfood',
-        element: <MyFoodReq></MyFoodReq>
+        element: <PrivateRoute><MyFoodReq></MyFoodReq></PrivateRoute>
       },
       {
         path: '/login',
@@ -67,12 +68,12 @@ const router = createBrowserRouter([
       },
       {
         path: '/detail/:_id',
-        element: <FeaturedDetail></FeaturedDetail>,
+        element: <PrivateRoute><FeaturedDetail></FeaturedDetail></PrivateRoute>,
         loader: () => fetch('http://localhost:5000/add')
       },
       {
         path: '/avail/:_id',
-        element: <FoodDetail></FoodDetail>,
+        element:<PrivateRoute><FoodDetail></FoodDetail></PrivateRoute>,
         loader: () => fetch('http://localhost:5000/avail')
       }
     ]

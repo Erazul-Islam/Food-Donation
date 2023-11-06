@@ -1,4 +1,6 @@
 import Swal from "sweetalert2";
+import animationData from '../../public/animate.json'
+import Lottie from "lottie-react";
 
 const AddFood = () => {
 
@@ -101,6 +103,11 @@ const AddFood = () => {
                         <button className="btn w-full h-12 mt-4 rounded-lg hover:bg-yellow-600 bg-yellow-400 border-none text-[#331A15]">Add</button>
                     </div>
                 </form>
+            </div>
+            <div>
+                <Lottie className="w-44" animationData={animationData} loop={true} autoplay={true}>
+
+                </Lottie>
             </div>
         </div>
     );

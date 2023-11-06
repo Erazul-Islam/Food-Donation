@@ -1,9 +1,14 @@
+import Lottie from 'lottie-react';
+import animationData from '../../public/Animation - 1699262990966.json'
+
 const Footer = () => {
     return (
         <div>
             <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded">
                 <div>
-                    <img src='https://i.ibb.co/jLFK6Sk/Food-Sharing-Project-logo.png' className="rounded-full w-28" alt="" />
+                    <Lottie className='w-80' animationData={animationData} autoplay={true} loop={true} >
+
+                    </Lottie>
                 </div>
                 <nav>
                     <div className="grid grid-flow-col gap-4">

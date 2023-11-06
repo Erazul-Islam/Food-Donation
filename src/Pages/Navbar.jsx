@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { Link, NavLink, Navigate } from "react-router-dom";
 import { AuthContext } from "../Components/Providers/AuthProvider";
+import amimationData from '../../public/Animation - 1699262990966.json';
+import Lottie from "lottie-react";
 
 const Navbar = () => {
 
@@ -25,7 +27,9 @@ const Navbar = () => {
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-6 h-6 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                             </label>
                         </div>
-                        <div className="flex-1 text-xl font-bold px-2 mx-2">FoodWave</div>
+                        <div className="flex-1 text-xl font-bold px-2 mx-2"> <span>
+                                <Lottie className="w-40" loop={true} autoplay={true} animationData={amimationData}></Lottie>
+                            </span> Wave</div>
                         <div className="flex-none hidden lg:block">
                             <ul className="menu text-lg gap-2 font-semibold menu-horizontal">
                                 {/* Navbar menu content here */}
