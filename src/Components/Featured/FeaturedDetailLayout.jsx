@@ -50,7 +50,7 @@ const FeaturedDetailLayout = ({ food }) => {
                         <button className="btn" onClick={() => document.getElementById('my_modal_5').showModal()}>Request</button>
                         <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
                             <div className="modal-box">
-                                <img className="rounded-xl" src={image} alt="" />
+                                <img className="rounded-xl ease-in duration-300" src={image} alt="" />
                                 <div className="mt-4">
                                     <div className="ml-16">
                                         <input type="text" value={food_name} className="input pl-12 input-bordered w-full max-w-xs" disabled />

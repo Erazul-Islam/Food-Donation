@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import animationData from "../../../public/View.json"
+import Lottie from "lottie-react";
 
 /* eslint-disable react/prop-types */
 const FoodCard = ({ food }) => {
@@ -24,7 +26,7 @@ const FoodCard = ({ food }) => {
                     <p>{additional_note}</p>
                     <div className="card-actions">
                         <Link to={`/detail/${_id}`}>
-                            <button className="btn btn-primary">View Detail</button>
+                            <Lottie className="w-28" loop={true} autoPlay={true} animationData={animationData}></Lottie>
                         </Link>
                     </div>
                 </div>

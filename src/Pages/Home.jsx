@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import Slider from "../Components/Slider";
 import FoodCard from "../Components/Featured/FoodCard";
 import Footer from "./Footer";
 import PopularDonator from "../Components/ExtraHomePageSection/PopularDonator";
 import { Link } from "react-router-dom";
+import Slider from "../Components/Slider/Slider";
 // food_quantity
 
 
@@ -24,6 +24,7 @@ const Home = () => {
     return (
         <div>
             <Slider></Slider>
+
             <div className="mt-14 mb-14">
                 <p className="text-center text-5xl mb-12 font-bold animate__animated animate__fadeInTopLeft">Featured Foods</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ml-48">
