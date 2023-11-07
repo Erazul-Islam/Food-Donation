@@ -1,11 +1,20 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import { AuthContext } from "../Components/Providers/AuthProvider";
 
 const ManageMyFood = () => {
 
     const foods = useLoaderData();
+    // console.log(foods)
     const [users, setUsers] = useState(foods)
+
+    const { user } = useContext(AuthContext)
+    const email = user.email
+    console.log(email)
+
+    const filteredFoods = foods.filter(food => food.email === email)
+    console.log(filteredFoods)
 
     const handleDelete = _id => {
         console.log(_id)
@@ -44,7 +53,7 @@ const ManageMyFood = () => {
     return (
         <div>
             <div className="text-center text-4xl font-bold mt-16">
-                <p>All the foods that is added</p>
+                <p>All the foods that You is added</p>
             </div>
             <div className="overflow-x-auto mt-20 ml-16 mr-16">
                 <table className="table">
@@ -63,7 +72,7 @@ const ManageMyFood = () => {
                     <tbody>
                         {/* row 1 */}
                         {
-                            foods.map(food => <tr key={food._id}>
+                            filteredFoods.map(food => <tr key={food._id}>
                                 <td>
                                     <div className="flex items-center space-x-3">
                                         <div>

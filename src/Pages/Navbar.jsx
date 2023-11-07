@@ -42,8 +42,8 @@ const Navbar = () => {
                                 {
                                     user ? <>
                                         <div className="flex mt-32 lg:mt-2 gap-4">
-                                            <p className=" lg:mt-2 lg">{user.displayName}</p>
-                                            <img className="rounded-full h-8 w-8" src={user.photoURL} alt="" />
+                                            <p className=" lg:mt-2 lg">{user?.displayName}</p>
+                                            <img className="rounded-full h-8 w-8" src={user?.photoURL} alt="" />
                                         </div>
                                         <button onClick={handleLogOut} className="btn- btn-sm">Sign Out</button>
                                     </>

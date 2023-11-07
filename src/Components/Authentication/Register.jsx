@@ -18,9 +18,12 @@ const Register = () => {
 
         const email = e.target.email.value;
         const password = e.target.password.value;
-        console.log(email, password)
+        const photoURL = e.target.photoURL.value;
+        const displayName = e.target.displayName.value;
 
-        createUser(email, password)
+        console.log(email, password,photoURL,displayName)
+
+        createUser(email, password,photoURL,displayName)
             .then(result => {
                 navigate('/')
                 console.log(result)
@@ -70,13 +73,13 @@ const Register = () => {
                                     <label className="label">
                                         <span className="label-text">Name</span>
                                     </label>
-                                    <input type="text" placeholder="Your Name...." className="input input-bordered" required />
+                                    <input type="text" name="displayName" placeholder="Your Name...." className="input input-bordered" required />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Photo URL</span>
                                     </label>
-                                    <input type="text" placeholder="submit your photo" className="input input-bordered" required />
+                                    <input type="text" placeholder="submit your photo" name="photoURL" className="input input-bordered" required />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
