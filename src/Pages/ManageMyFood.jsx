@@ -4,15 +4,6 @@ import Swal from "sweetalert2";
 
 const ManageMyFood = () => {
 
-    // const [food,setFoods] = useState([])
-    // const [users,setUsers] = useState(food)
-
-    // useEffect(() => {
-    //     fetch('http://localhost:5000/avail')
-    //     .then(res => res.json())
-    //     .then(data => setFoods(data))
-    // })
-
     const foods = useLoaderData();
     const [users, setUsers] = useState(foods)
 
@@ -96,6 +87,9 @@ const ManageMyFood = () => {
                                 <th>
                                     <Link to={`/edit/${food._id}`}>
                                         <button className="btn btn-ghost btn-xs">Edit</button>
+                                    </Link>
+                                    <Link to={`/single/${food._id}`}>
+                                        <button className="btn btn-ghost btn-xs">Manage</button>
                                     </Link>
                                     <button onClick={() => handleDelete(food._id)} className="btn btn-ghost btn-xs">Delete</button>
                                 </th>

@@ -20,6 +20,7 @@ import AvailableFood from './Components/AvailableFood/AvailableFood';
 import FoodDetail from './Components/AvailableFood/FoodDetail';
 import Edit from './Pages/Edit';
 import PrivateRoute from './Components/Authentication/PrivateRoute';
+import SingleManage from './Pages/SingleManage';
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,11 @@ const router = createBrowserRouter([
         path: '/manage',
         element:<PrivateRoute> <ManageMyFood></ManageMyFood></PrivateRoute>,
         loader: () => fetch('http://localhost:5000/avail')
+      },
+      {
+        path: '/single/:_id',
+        element: <SingleManage></SingleManage>,
+        loader: () => fetch('http://localhost:5000/request')
       },
       {
         path: '/edit/:_id',

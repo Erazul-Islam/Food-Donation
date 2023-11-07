@@ -39,7 +39,7 @@
         "donator_name": "Emily Wilson",
         "donator_img": "https://example.com/emily-wilson.jpg",
         "food_quantity": "1 bowl",
-        "expired_date": "2023-12-03",
+        "expired_date": 202303,
         "picup_Location": "DOHS",
         "additional_note": "Fresh mix of seasonal fruits."
     },

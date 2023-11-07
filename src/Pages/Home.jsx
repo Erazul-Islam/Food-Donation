@@ -4,6 +4,8 @@ import Footer from "./Footer";
 import PopularDonator from "../Components/ExtraHomePageSection/PopularDonator";
 import { Link } from "react-router-dom";
 import Slider from "../Components/Slider/Slider";
+import Review from "../Components/ExtraHomePageSection/Review";
+import Contact from "../Components/ExtraHomePageSection/Contact";
 // food_quantity
 
 
@@ -41,7 +43,8 @@ const Home = () => {
             <div>
                 <PopularDonator></PopularDonator>
             </div>
-
+                    <Review></Review>
+                    <Contact></Contact>
             <Footer></Footer>
         </div>
     );

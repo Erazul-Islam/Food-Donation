@@ -10,9 +10,14 @@ const AvailFoodLayout = ({ food }) => {
 
     const currentDate = new Date();
     const dateTimeString = currentDate.toLocaleString();
+    const userEmail = user.email;
+    console.log(userEmail)
+
 
     const handleReq = () => {
-        const reqFood = { _id, image, food_name, donator_name, food_quantity, expired_date, additional_note, }
+        const reqFood = { _id, image, food_name, donator_name, food_quantity, expired_date, additional_note,dateTimeString,userEmail }
+
+        console.log(reqFood)
 
         fetch('http://localhost:5000/request', {
             method: 'POST',
