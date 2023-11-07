@@ -40,5 +40,3 @@ const SingleManage = () => {
 };
 
 export default SingleManage;
-
-// : <div className="text-3xl font-bold text-center"> No request </div>
