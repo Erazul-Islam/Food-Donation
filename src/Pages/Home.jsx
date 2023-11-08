@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import Slider from "../Components/Slider/Slider";
 import Review from "../Components/ExtraHomePageSection/Review";
 import Contact from "../Components/ExtraHomePageSection/Contact";
+import animationData from "../../public/loading.json"
+import Lottie from "lottie-react";
 // food_quantity
 
 
@@ -23,29 +25,41 @@ const Home = () => {
             .then(data => setFoods(data))
     })
 
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(false)
+        }, 2000)
+    }, [])
+
     return (
         <div>
-            <Slider></Slider>
+            {
+                loading ? <Lottie className="w-96" loop={true} autoplay={true} animationData={animationData}></Lottie> : <div>
+                    <Slider></Slider>
 
-            <div className="mt-14 mb-14">
-                <p className="text-center text-5xl mb-12 font-bold animate__animated animate__fadeInTopLeft">Featured Foods</p>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ml-48">
-                    {
-                        strAscending.map(food => <FoodCard food={food} key={food.food_id}></FoodCard>)
-                    }
-                </div>
-            </div>
-            <div>
-                <Link to='/available'>
-                    <button className="btn btn-error lg:ml-[1000px]">See All</button>
-                </Link>
-            </div>
-            <div>
-                <PopularDonator></PopularDonator>
-            </div>
+                    <div className="mt-14 mb-14">
+                        <p className="text-center text-5xl mb-12 font-bold animate__animated animate__fadeInTopLeft">Featured Foods</p>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ml-14 lg:ml-48">
+                            {
+                                strAscending.map(food => <FoodCard food={food} key={food.food_id}></FoodCard>)
+                            }
+                        </div>
+                    </div>
+                    <div>
+                        <Link to='/available'>
+                            <button className="btn btn-error lg:ml-[1000px]">See All</button>
+                        </Link>
+                    </div>
+                    <div>
+                        <PopularDonator></PopularDonator>
+                    </div>
                     <Review></Review>
                     <Contact></Contact>
-            <Footer></Footer>
+                    <Footer></Footer>
+                </div>
+            }
         </div>
     );
 };

@@ -4,6 +4,9 @@ import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../Components/Providers/AuthProvider";
 import { useState } from "react";
+import { useEffect } from "react";
+import Lottie from "lottie-react";
+import animationData from "../../public/loading.json"
 
 const MyFoodReq = () => {
 
@@ -18,7 +21,13 @@ const MyFoodReq = () => {
 
     const [users, setUsers] = useState(data)
 
+    const [loading, setLoading] = useState(true)
 
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(false)
+        }, 2000)
+    }, [])
 
 
     const filteredFoods = data.filter(food => food.userEmail === email)
@@ -29,7 +38,7 @@ const MyFoodReq = () => {
 
 
     const handleCancel = _id => {
-        
+
         Swal.fire({
             title: "Are you sure?",
             text: "You won't be able to revert this!",
@@ -64,7 +73,8 @@ const MyFoodReq = () => {
 
     return (
         <div>
-            <div className="grid grid-cols-3 ml-28 mt-28">
+            {
+                loading ? <Lottie className="w-96" loop={true} autoplay={true} animationData={animationData}></Lottie> :<div className="grid grid-cols-3 ml-28 mt-28">
                 {
                     filteredFoods.map(one => <div key={one._id} className="card mt-14 w-96 card-side bg-base-100 shadow-xl">
                         <figure><img className="w-full h-full" src={one.image} alt="Movie" /></figure>
@@ -78,6 +88,7 @@ const MyFoodReq = () => {
                     </div>)
                 }
             </div>
+            }
         </div>
     );
 };

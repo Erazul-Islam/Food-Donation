@@ -58,13 +58,13 @@ const FeaturedDetailLayout = ({ food }) => {
                                     <div className="ml-16">
                                         <input type="text" value={food_name} className="input pl-12 input-bordered w-full max-w-xs" disabled />
                                         <input type="text" value={_id} className="input pl-12 input-bordered w-full max-w-xs mt-4" disabled />
-                                        <input type="text" placeholder="email" className="input pl-12 input-bordered w-full mt-4 max-w-xs" disabled />
+                                        {/* <input type="text" placeholder="email" className="input pl-12 input-bordered w-full mt-4 max-w-xs" disabled /> */}
                                         <input type="text" value={donator_name} className="input pl-12 input-bordered w-full mt-4 max-w-xs" disabled />
                                         <input type="text" value={user.email} className="input pl-12 input-bordered w-full mt-4 max-w-xs" disabled />
                                         {/* <input type="text" value={picup_Location} className="input pl-12 input-bordered w-full mt-4 max-w-xs" disabled /> */}
                                         <input type="text" value={dateTimeString} className="input pl-12 input-bordered mt-4 w-full max-w-xs" disabled />
                                         <input type="text" value={expired_date} className="input pl-12 input-bordered w-full mt-4 max-w-xs" disabled />
-                                        <input type="text" defaultValue={additional_note} className="input pl-12 input-bordered mt-4 w-full max-w-xs" />
+                                        <input type="text"  defaultValue={additional_note} className="input pl-12 input-bordered mt-4 w-full max-w-xs" />
                                         <input type="text" defaultValue={`$5000`} className="input pl-12 input-bordered mt-4 w-full max-w-xs" />
                                     </div>
                                 </div>

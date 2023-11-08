@@ -6,7 +6,7 @@ import Lottie from "lottie-react";
 const FoodCard = ({ food }) => {
     // console.log(food)
 
-    const { _id,image, food_name, donator_name, donator_img, food_quantity, expired_date, additional_note } = food || {}
+    const { _id, image, food_name, donator_name, donator_img, food_quantity, expired_date, additional_note ,picup } = food || {}
     return (
         <div >
             <div className="card w-96 bg-base-100 shadow-xl">
@@ -15,15 +15,27 @@ const FoodCard = ({ food }) => {
                 </figure>
                 <div className="card-body items-center text-center">
                     <h2 className="card-title">{food_name}</h2>
-                    <p>{donator_name}</p>
+                    <div className="flex gap-1 text-xl">
+                        <p>Donator: </p>
+                        <p>{donator_name}</p>
+                    </div>
                     <div className="avatar">
                         <div className="w-24 rounded-full">
                             <img src={donator_img} />
                         </div>
                     </div>
-                    <p>{food_quantity}</p>
-                    <p>{expired_date}</p>
-                    <p>{additional_note}</p>
+                    <div>
+                        <p className="text-2xl text-pink-500">{food_quantity}</p>
+                        <div className="flex mt-1 text-xl">
+                            <p>Expired In : </p>
+                            <p>{expired_date}</p>
+                        </div>
+                        <div className="flex mt-1 text-xl">
+                            <p>Picup:</p>
+                            <p>{picup}</p>
+                        </div>
+                        <p className="mt-1">{additional_note}</p>
+                    </div>
                     <div className="card-actions">
                         <Link to={`/detail/${_id}`}>
                             <Lottie className="w-28" loop={true} autoPlay={true} animationData={animationData}></Lottie>
