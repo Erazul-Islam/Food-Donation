@@ -38,7 +38,7 @@ const MyFoodReq = () => {
 
 
     const handleCancel = _id => {
-
+        console.log(_id)
         Swal.fire({
             title: "Are you sure?",
             text: "You won't be able to revert this!",
@@ -50,7 +50,7 @@ const MyFoodReq = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/request/${_id}`, {
+                fetch(` https://share-eat-server-6nzd1gacu-erazul-islam.vercel.app/request/${_id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
@@ -59,7 +59,7 @@ const MyFoodReq = () => {
                         if (data.deletedCount > 0) {
                             Swal.fire({
                                 title: "Deleted!",
-                                text: "Your request has been cancelled.",
+                                text: "Your cancelletion has been cancelled.",
                                 icon: "success"
                             });
                             const remaining = users.filter(user => user._id !== _id)

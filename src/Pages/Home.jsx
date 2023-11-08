@@ -17,10 +17,10 @@ const Home = () => {
     const strAscending = [...foods].sort((a, b) =>
         a.food_quantity > b.food_quantity ? -1 : 1,
     );
-    console.log(strAscending)
+    // console.log(strAscending)
 
     useEffect(() => {
-        fetch('http://localhost:5000/add')
+        fetch(' https://share-eat-server-6nzd1gacu-erazul-islam.vercel.app/add')
             .then(res => res.json())
             .then(data => setFoods(data))
     })

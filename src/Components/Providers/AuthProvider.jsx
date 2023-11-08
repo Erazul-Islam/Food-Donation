@@ -4,6 +4,7 @@ import { useState } from "react";
 import { createContext } from "react";
 import auth from "../../firebase.config";
 import { useEffect } from "react";
+import axios from "axios";
 
 export const AuthContext = createContext(null)
 const provider = new GoogleAuthProvider();
@@ -37,6 +38,13 @@ const AuthProvider = ({children}) => {
         const unsubsCribe = onAuthStateChanged(auth, currentUser => {
             setUser(currentUser)
             setLoading(false)
+            if(currentUser){
+                const loggedUser = {email: createUser.email}
+                axios.post( ' https://share-eat-server-6nzd1gacu-erazul-islam.vercel.app/jwt' ,loggedUser, {withCredentials: true})
+                .then(res => {
+                    console.log('token response',res.data)
+                })
+            }
         }) 
         return () => {
             unsubsCribe();

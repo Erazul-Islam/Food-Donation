@@ -19,7 +19,7 @@ const FeaturedDetailLayout = ({ food }) => {
         const reqFood = { _id, image, food_name, donator_name, food_quantity, expired_date, additional_note, dateTimeString, userEmail}
         console.log(reqFood)
 
-        fetch('http://localhost:5000/request', {
+        fetch(' https://share-eat-server-6nzd1gacu-erazul-islam.vercel.app/request', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

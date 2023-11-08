@@ -40,7 +40,7 @@ const ManageMyFood = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/avail/${_id}`, {
+                fetch(` https://share-eat-server-6nzd1gacu-erazul-islam.vercel.app/avail/${_id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
