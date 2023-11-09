@@ -35,7 +35,7 @@ const AddFood = () => {
         const newFood = { food_name, image, food_quantity, picup_Location, expired_date, additional_note, donator_img, donator_name, email, availability }
         console.log(newFood)
 
-        fetch(' https://share-eat-server-6nzd1gacu-erazul-islam.vercel.app/avail', {
+        fetch(' https://share-eat-server.vercel.app/avail', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

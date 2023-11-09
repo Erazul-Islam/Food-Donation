@@ -8,7 +8,7 @@ const PopularDonator = () => {
     const [donators, setDonator] = useState([])
 
     useEffect(() => {
-        fetch(' https://share-eat-server-6nzd1gacu-erazul-islam.vercel.app/add')
+        fetch(' https://share-eat-server.vercel.app/add')
             .then(res => res.json())
             .then(data => setDonator(data))
     })

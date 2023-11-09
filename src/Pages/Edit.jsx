@@ -29,7 +29,7 @@ const Edit = () => {
         const EditFood = { food_name, image, food_quantity, picup_Location, expired_date, additional_note, donator_img, donator_name, email, availability }
         console.log(EditFood)
 
-        fetch(` https://share-eat-server-6nzd1gacu-erazul-islam.vercel.app/avail/${_id}`, {
+        fetch(` https://share-eat-server.vercel.app/avail/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

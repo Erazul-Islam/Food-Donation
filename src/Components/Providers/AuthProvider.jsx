@@ -40,7 +40,7 @@ const AuthProvider = ({children}) => {
             setLoading(false)
             if(currentUser){
                 const loggedUser = {email: createUser.email}
-                axios.post( ' https://share-eat-server-6nzd1gacu-erazul-islam.vercel.app/jwt' ,loggedUser, {withCredentials: true})
+                axios.post( ' https://share-eat-server.vercel.app/jwt' ,loggedUser, {withCredentials: true})
                 .then(res => {
                     console.log('token response',res.data)
                 })

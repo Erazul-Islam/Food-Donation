@@ -39,27 +39,27 @@ const router = createBrowserRouter([
       {
         path: '/available',
         element: <AvailableFood></AvailableFood>,
-        loader: () => fetch(' https://share-eat-server-6nzd1gacu-erazul-islam.vercel.app/avail')
+        loader: () => fetch(' https://share-eat-server.vercel.app/avail')
       },
       {
         path: '/manage',
         element:<PrivateRoute> <ManageMyFood></ManageMyFood></PrivateRoute>,
-        loader: () => fetch(' https://share-eat-server-6nzd1gacu-erazul-islam.vercel.app/avail')
+        loader: () => fetch(' https://share-eat-server.vercel.app/avail')
       },
       {
         path: '/single/:_id',
         element: <SingleManage></SingleManage>,
-        loader: () => fetch(' https://share-eat-server-6nzd1gacu-erazul-islam.vercel.app/request')
+        loader: () => fetch(' https://share-eat-server.vercel.app/request')
       },
       {
         path: '/edit/:_id',
         element: <PrivateRoute><Edit></Edit></PrivateRoute>,
-        loader: ({params}) => fetch(` https://share-eat-server-6nzd1gacu-erazul-islam.vercel.app/avail/${params._id}`)
+        loader: ({params}) => fetch(` https://share-eat-server.vercel.app/avail/${params._id}`)
       },
       {
         path: '/myfood',
         element: <PrivateRoute><MyFoodReq></MyFoodReq></PrivateRoute>,
-        loader: () => fetch(' https://share-eat-server-6nzd1gacu-erazul-islam.vercel.app/request')
+        loader: () => fetch(' https://share-eat-server.vercel.app/request')
       },
       {
         path: '/login',
@@ -76,12 +76,12 @@ const router = createBrowserRouter([
       {
         path: '/detail/:_id',
         element: <PrivateRoute><FeaturedDetail></FeaturedDetail></PrivateRoute>,
-        loader: () => fetch(' https://share-eat-server-6nzd1gacu-erazul-islam.vercel.app/add')
+        loader: () => fetch(' https://share-eat-server.vercel.app/add')
       },
       {
         path: '/avail/:_id',
         element:<PrivateRoute><FoodDetail></FoodDetail></PrivateRoute>,
-        loader: () => fetch(' https://share-eat-server-6nzd1gacu-erazul-islam.vercel.app/avail')
+        loader: () => fetch(' https://share-eat-server.vercel.app/avail')
       },
     ]
   },

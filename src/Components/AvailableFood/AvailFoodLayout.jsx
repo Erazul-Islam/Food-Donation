@@ -19,7 +19,7 @@ const AvailFoodLayout = ({ food }) => {
 
         console.log(reqFood)
 
-        fetch(' https://share-eat-server-6nzd1gacu-erazul-islam.vercel.app/request', {
+        fetch(' https://share-eat-server.vercel.app/request', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -50,7 +50,7 @@ const MyFoodReq = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(` https://share-eat-server-6nzd1gacu-erazul-islam.vercel.app/request/${_id}`, {
+                fetch(` https://share-eat-server.vercel.app/request/${_id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
